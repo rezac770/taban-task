@@ -1,0 +1,202 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "IRANYekan", sans-serif;
+  direction: rtl;
+  background-color: #7ddde8;
+  user-select: none;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.logo-app {
+  width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+.name-app {
+  object-fit: cover;
+}
+.abundent {
+  font-size: 10px;
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 0 auto;
+}
+.abundent::after {
+  content: "";
+  display: block;
+  background-color: #c6c6c6;
+
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+}
+.abundent::before {
+  content: "";
+  display: block;
+  background-color: #c6c6c6;
+  color: black;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+}
+.banner {
+  width: 100%;
+  min-height: 150px;
+  margin: 0 auto;
+  max-width: "450px";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* navBAr */
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+  width: 50px;
+  height: 50px;
+  background-color: #1db5c8;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav-parent {
+  width: 100%;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  display: block;
+  max-width: 420px;
+}
+.text-nav {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  font-size: 10px;
+}
+.center-box {
+  position: relative;
+  background-color: gray;
+
+  margin: 0 auto;
+}
+.center-box::after {
+  content: "";
+  position: absolute;
+
+  right: 50%;
+  top: -100%;
+  transform: translate(50%, -80%);
+  width: 70px;
+  height: 70px;
+  background-color: #1db5c8;
+  border-radius: 50%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.active {
+  color: crimson;
+}
+.links::after {
+  content: "";
+  display: block;
+  background-color: crimson;
+  width: 0;
+  height: 2px;
+  transition: all 0.1s ease-in;
+}
+.links:hover::after {
+  width: 100%;
+}
+
+.selected {
+  color: crimson !important;
+}
+.date-transaction {
+  position: relative;
+}
+.date-transaction::after {
+  content: "";
+  display: block;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50px, 0);
+}
+/* transection */
+.parent-status {
+  padding: 10px;
+  background-color: black;
+}
+.icons-status {
+  padding: 10px;
+}
+.icons-status > * {
+  padding: 5px;
+}
+
+.success {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background-color: #e1feed;
+}
+.faill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background-color: #fee2e1;
+}
+/* loader */
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 10px dotted #7ddde8;
+  border-radius: 50%;
+  border-bottom-color: red;
+  animation: loader 0.5s infinite ease-in;
+  margin: 0 auto;
+
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* slider */
+.slider {
+  max-width: 460px;
+  margin: 0 auto;
+}
+.slider > * {
+  width: 100%;
+}
